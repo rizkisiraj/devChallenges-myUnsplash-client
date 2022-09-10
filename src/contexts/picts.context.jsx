@@ -24,7 +24,7 @@ export const PictsProvider = ({children}) => {
 
     useEffect(() => {
         const fetchPicts = async () => {
-            const { data } = await axios.get('/get');
+            const { data } = await axios.get('https://myunsplash-rizsijar.herokuapp.com/api/get');
             setPicts(data)
         }
 

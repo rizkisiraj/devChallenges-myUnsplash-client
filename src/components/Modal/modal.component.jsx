@@ -36,8 +36,8 @@ export default function Modal() {
 
   const handleDelete = async (id) => {
 
-    await axios.delete(`delete/${id}`);
-    const { data } = await axios.get('/get');
+    await axios.delete(`https://myunsplash-rizsijar.herokuapp.com/api/delete/${id}`);
+    const { data } = await axios.get('https://myunsplash-rizsijar.herokuapp.com/api/get');
     setPicts(data);
     setModalContent(null);
     setModal(false);
@@ -46,7 +46,7 @@ export default function Modal() {
 
   const handleSubmit = async (label, url) => {
 
-    await axios.post('/post', {
+    await axios.post('https://myunsplash-rizsijar.herokuapp.com/api/post', {
       label,
       url
     })
