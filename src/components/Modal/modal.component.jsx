@@ -51,7 +51,7 @@ export default function Modal() {
       url
     })
     
-    const { data } = await axios.get('/get');
+    const { data } = await axios.get('https://myunsplash-rizsijar.herokuapp.com/api/get');
     setPicts(data);
     setModal(false);
   }
